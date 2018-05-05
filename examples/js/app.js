@@ -1,15 +1,31 @@
+/*
+/ Method that gets the values from the textareas
+/ and insert to an iframe
+*/
+function render() {
+  const html = document.getElementById("html");
+	const css = document.getElementById("css");
+	const js = document.getElementById("js");
+	const code = document.getElementById("code").contentWindow.document;
+
+  code.open();
+  code.writeln(`${html.innerText}<style>${css.innerText}</style><script>${js.innerText}</script>`);
+  code.close();
+}
+
+/*
+/ Create listener to call the render
+/ always after a keypress.
+*/
 function compile() {
-
-	var html = document.getElementById("html");
-	var css = document.getElementById("css");
-	var js = document.getElementById("js");
-	var code = document.getElementById("code").contentWindow.document;
-
 	 document.body.onkeyup = function(){
-	    code.open();
-    code.writeln(html.innerText+"<style>"+css.innerText+"</style>"+"<script>" + js.innerText + "</script>");
-		code.close();
-      };
-    };
+    render();
+  };
+};
 
+/*
+/ Create the listener
+/ and render the first values
+*/
 compile();
+render();
