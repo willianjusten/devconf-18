@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>TweenMax.staggerFrom()</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+
+    <style>
+      #css {
+        display: none;
+      }
+      #html, #js {
+        width: 49.5%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <iframe id="code"></iframe>
+
+    <textarea id="html" class="language-html">
+<script src="js/TweenMax.min.js"></script>
+<div class="letters devconf">
+  <span class="letter">D</span>
+  <span class="letter">E</span>
+  <span class="letter">V</span>
+  <span class="letter">C</span>
+  <span class="letter">O</span>
+  <span class="letter">N</span>
+  <span class="letter">F</span>
+</div>
+    </textarea>
+
+
+    <textarea id="css" class="language-css">
+      body {
+        background: #ec6832;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .letters {
+        display: inline-block;
+        margin: 15px;
+      }
+
+      .letter {
+        position: relative;
+        font-family: sans-serif;
+        font-style: italic;
+        font-size: 4em;
+        font-weight: bold;
+        color: #fff;
+      }
+    </textarea>
+
+
+    <textarea id="js" contenteditable class="language-js">
+// TweenMax.staggerFrom(target, time, {properties}, stagger)
+TweenMax.staggerFrom('.letter', 2, {
+  opacity: 0,
+  top: -60
+}, .2);
+    </textarea>
+
+
+    <script src="js/prism.js"></script>
+    <script src="js/prism-highlight.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>

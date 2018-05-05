@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>TweenMax.staggerFromTo()</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+
+    <style>
+      #css {
+        display: none;
+      }
+      #html {
+        width: 20%;
+      }
+      #js {
+        width: 79%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <iframe id="code"></iframe>
+
+    <textarea id="html" class="language-html">
+<script src="js/TweenMax.min.js"></script>
+<div class="balls">
+  <span class="ball"></span>
+  <span class="ball"></span>
+  <span class="ball"></span>
+  <span class="ball"></span>
+  <span class="ball"></span>
+</div>
+    </textarea>
+
+
+    <textarea id="css" class="language-css">
+      body {
+        background: #000;
+      }
+
+      .balls {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .ball {
+        position: relative;
+        background: #fff;
+        display: inline-block;
+        margin: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+      }
+
+    </textarea>
+
+
+    <textarea id="js" contenteditable class="language-js">
+// TweenMax.staggerFromTo(target, time, {from}, {to}, staggerTime)
+
+TweenMax.staggerFromTo('.ball', 2, {
+  scale: .1,
+  opacity: 0
+}, {
+  scale: 1.2,
+  opacity: 1,
+}, .2);
+    </textarea>
+
+
+    <script src="js/prism.js"></script>
+    <script src="js/prism-highlight.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>

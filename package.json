@@ -1,0 +1,32 @@
+{
+  "name": "quayly-presenter",
+  "version": "2.0.0",
+  "description": "A boilerplate to create presentations using Reveal.JS, Gulp and more",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/gulp",
+    "deploy": "./node_modules/.bin/gulp deploy-pages"
+  },
+  "keywords": [
+    "reveal",
+    "gulp",
+    "stylus",
+    "highlight"
+  ],
+  "author": "Willian Justen de Vasconcellos",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "2.24.1",
+    "gulp": "3.9.1",
+    "gulp-cache": "1.0.2",
+    "gulp-concat": "2.6.1",
+    "gulp-cssnano": "2.1.3",
+    "gulp-gh-pages-will": "0.5.5",
+    "gulp-imagemin": "4.1.0",
+    "gulp-plumber": "1.2.0",
+    "gulp-pug": "4.0.1",
+    "gulp-stylus": "2.7.0",
+    "gulp-uglify": "3.0.0",
+    "gulp-util": "3.0.8"
+  }
+}

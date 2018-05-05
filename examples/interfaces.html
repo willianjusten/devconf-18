@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Interfaces</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+
+    <style>
+      #css {
+        display: none;
+      }
+      #html {
+        width: 19.5%;
+      }
+      #js {
+        width: 80%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <iframe id="code"></iframe>
+
+    <textarea id="html" class="language-html">
+<script src="js/TweenMax.min.js"></script>
+<ul class="nav">
+  <li class="btn">new game</li>
+  <li class="btn">options</li>
+  <li class="btn">credits</li>
+</ul>
+<div class="instructions">
+  click the buttons to animate out
+</div>
+    </textarea>
+
+
+    <textarea id="css" class="language-css">
+      body, html {
+  font-family: Signika Negative, sans-serif;
+  background: #111;
+  color:#efefef;
+  height:100%;
+}
+.btn {
+  border: none;
+  text-align:center;
+  cursor: pointer;
+  padding: 25px 80px;
+  margin: 25px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  background-color:rgb(38, 38, 38);
+  border: solid 1px transparent;
+  border-radius:10px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nav {
+  position:relative;
+  width:350px;
+  margin:auto;
+  overflow:hidden;
+  background-color:#1d1d1d;
+  height:90%;
+  list-style:none;
+  padding: 0;
+}
+
+.instructions {
+  text-align:center;
+  margin-top:10px;
+}
+    </textarea>
+
+
+    <textarea id="js" contenteditable class="language-js">
+TweenMax.staggerFrom(".btn", 2, {
+  scale:0.5,
+  opacity:0,
+  delay:0.5,
+  ease:Elastic.easeOut,
+  force3D:true},
+0.2);
+
+var btn = document.querySelector('.btn');
+
+btn.addEventListener('click', function(){
+  TweenMax.staggerTo(".btn", 0.5, {
+    opacity:0,
+    y:-100,
+    ease:Back.easeIn},
+  0.1);
+});
+    </textarea>
+
+
+    <script src="js/prism.js"></script>
+    <script src="js/prism-highlight.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>
